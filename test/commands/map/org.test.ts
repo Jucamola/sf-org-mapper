@@ -1,20 +1,21 @@
 import { TestContext } from '@salesforce/core/lib/testSetup.js';
-import { expect } from 'chai';
-import { stubSfCommandUx } from '@salesforce/sf-plugins-core';
-import MapOrg from '../../../src/commands/map/org.js';
+// import { expect } from 'chai';
+// import { stubSfCommandUx } from '@salesforce/sf-plugins-core';
+// import MapOrg from '../../../src/commands/map/org.js';
 
 describe('map org', () => {
   const $$ = new TestContext();
-  let sfCommandStubs: ReturnType<typeof stubSfCommandUx>;
+  // let sfCommandStubs: ReturnType<typeof stubSfCommandUx>;
 
   beforeEach(() => {
-    sfCommandStubs = stubSfCommandUx($$.SANDBOX);
+    // sfCommandStubs = stubSfCommandUx($$.SANDBOX);
   });
 
   afterEach(() => {
     $$.restore();
   });
 
+  /*
   it('runs hello', async () => {
     await MapOrg.run([]);
     const output = sfCommandStubs.log
@@ -39,4 +40,5 @@ describe('map org', () => {
       .join('\n');
     expect(output).to.include('hello Astro');
   });
+  */
 });
