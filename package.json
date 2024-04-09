@@ -5,12 +5,19 @@
   "dependencies": {
     "@oclif/core": "^3.26.0",
     "@salesforce/core": "^6.4.7",
-    "@salesforce/sf-plugins-core": "^7.1.3"
+    "@salesforce/sf-plugins-core": "^7.1.3",
+    "csv-parse": "^5.5.5",
+    "cytoscape": "^3.28.1",
+    "ngraph.gexf": "^1.0.0",
+    "ngraph.graph": "^20.0.1",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.1.3",
     "@salesforce/cli-plugins-testkit": "^5.1.9",
     "@salesforce/dev-scripts": "^8.3.0",
+    "@types/cytoscape": "^3.21.0",
     "eslint-plugin-sf-plugin": "^1.17.2",
     "oclif": "^4.6.3",
     "shx": "0.3.4",
@@ -44,8 +51,8 @@
       "@oclif/plugin-help"
     ],
     "topics": {
-      "hello": {
-        "description": "Commands to say hello."
+      "map": {
+        "description": "description for map"
       }
     },
     "flexibleTaxonomy": true
