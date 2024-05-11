@@ -111,35 +111,30 @@ sf plugins
 
 <!-- commands -->
 
-- [`sf hello world`](#sf-hello-world)
+- [`sf map org`](#sf-map-org)
 
-## `sf hello world`
+## `sf map org`
 
-Say hello either to the world or someone you know.
+Summary of a command.
 
 ```
 USAGE
-  $ sf hello world [--json] [-n <value>]
+  $ sf map org -o <value> [--json]
 
 FLAGS
-  -n, --name=<value>  [default: World] The name of the person you'd like to say hello to.
+  -o, --target-org=<value>  (required) Username or alias of the target org. Not required if the `target-org`
+                            configuration variable is already set.
 
 GLOBAL FLAGS
   --json  Format output as json.
 
 DESCRIPTION
-  Say hello either to the world or someone you know.
+  Summary of a command.
 
-  Say hello either to the world or someone you know.
+  More information about a command. Don't repeat the summary.
 
 EXAMPLES
-  Say hello to the world:
-
-    $ sf hello world
-
-  Say hello to someone you know:
-
-    $ sf hello world --name Astro
+  $ sf map org
 ```
 
 <!-- commandsstop -->
