@@ -1,6 +1,6 @@
-# org-mapper
+# sf-org-mapper
 
-[![NPM](https://img.shields.io/npm/v/org-mapper.svg?label=org-mapper)](https://www.npmjs.com/package/org-mapper) [![Downloads/week](https://img.shields.io/npm/dw/org-mapper.svg)](https://npmjs.org/package/org-mapper) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/org-mapper/main/LICENSE.txt)
+[![NPM](https://img.shields.io/npm/v/sf-org-mapper.svg?label=sf-org-mapper)](https://www.npmjs.com/package/sf-org-mapper) [![Downloads/week](https://img.shields.io/npm/dw/sf-org-mapper.svg)](https://npmjs.org/package/sf-org-mapper) [![License](https://img.shields.io/badge/License-BSD%203--Clause-brightgreen.svg)](https://raw.githubusercontent.com/salesforcecli/sf-org-mapper/main/LICENSE.txt)
 
 ## Using the template
 
@@ -53,7 +53,7 @@ We always recommend using the latest version of these commands bundled with the 
 ## Install
 
 ```bash
-sf plugins install org-mapper@x.y.z
+sf plugins install sf-org-mapper@x.y.z
 ```
 
 ## Issues
@@ -85,7 +85,7 @@ To build the plugin locally, make sure to have yarn installed and run the follow
 
 ```bash
 # Clone the repository
-git clone git@github.com:salesforcecli/org-mapper
+git clone git@github.com:salesforcecli/sf-org-mapper
 
 # Install the dependencies and compile
 yarn && yarn build
