@@ -66,7 +66,7 @@
     "docs": "sf-docs",
     "format": "wireit",
     "lint": "wireit",
-    "postinstall": "yarn husky install && patch-package",
+    "postinstall": "patch-package",
     "postpack": "shx rm -f oclif.manifest.json oclif.lock",
     "prepack": "sf-prepack",
     "test": "wireit",
