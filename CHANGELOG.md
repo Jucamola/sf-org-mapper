@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/Jucamola/sf-org-mapper/compare/1.0.2...1.0.3) (2024-05-12)
+
+
+### Bug Fixes
+
+* move patch package to prepare script ([26855d2](https://github.com/Jucamola/sf-org-mapper/commit/26855d2de45b5ca7a04b8d371995eca7769200eb))
+
+
+
 ## [1.0.2](https://github.com/Jucamola/sf-org-mapper/compare/1.0.1...1.0.2) (2024-05-12)
 
 
