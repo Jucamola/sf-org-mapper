@@ -110,8 +110,7 @@ sf plugins
 ## Commands
 
 <!-- commands -->
-
-- [`sf map org`](#sf-map-org)
+* [`sf map org`](#sf-map-org)
 
 ## `sf map org`
 
@@ -136,5 +135,4 @@ DESCRIPTION
 EXAMPLES
   $ sf map org
 ```
-
 <!-- commandsstop -->
