@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/Jucamola/sf-org-mapper/compare/1.0.3...1.0.4) (2024-05-19)
+
+
+### Bug Fixes
+
+* change dependencies ([1fa04ce](https://github.com/Jucamola/sf-org-mapper/commit/1fa04ce8577f579c55ce924fd7056a59fdc5617d))
+
+
+
 ## [1.0.3](https://github.com/Jucamola/sf-org-mapper/compare/1.0.2...1.0.3) (2024-05-12)
 
 
