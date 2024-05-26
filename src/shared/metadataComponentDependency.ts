@@ -30,7 +30,7 @@ async function queryBulk(conn: Connection, where: string): Promise<MetadataCompo
     RefMetadataComponentId, RefMetadataComponentNamespace, 
     RefMetadataComponentName, RefMetadataComponentType 
   FROM MetadataComponentDependency WHERE ${where}`,
-    { tooling: true, pollTimeout: 120000, pollInterval: 2000 }
+    { tooling: true, pollTimeout: 120_000, pollInterval: 2000 }
   );
 
   return result.map((record) => ({
