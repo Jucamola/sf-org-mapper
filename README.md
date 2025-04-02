@@ -111,35 +111,81 @@ sf plugins
 
 <!-- commands -->
 
-- [`sf hello world`](#sf-hello-world)
+- [`sf map metadata`](#sf-map-metadata)
+- [`sf map org`](#sf-map-org)
 
-## `sf hello world`
+## `sf map metadata`
 
-Say hello either to the world or someone you know.
+Summary of a command.
 
 ```
 USAGE
-  $ sf hello world [--json] [-n <value>]
+  $ sf map metadata -o <value> -f <value>... [--json] [--flags-dir <value>] [-a <value>] [-d <value>] [-t
+    <value>...] [--exclude-types <value>...] [-n <value>...] [--exclude-namespaces <value>...] [-m <value>...]
+    [--exclude-manageable-states <value>...]
 
 FLAGS
-  -n, --name=<value>  [default: World] The name of the person you'd like to say hello to.
+  -a, --api-version=<value>                   Target API version for the deploy.
+  -d, --output-dir=<value>                    Directory in which to generate the gefx file; default is current
+                                              directory.
+  -f, --files=<value>...                      (required) MedataComponentDependency csv files
+  -m, --include-manageable-states=<value>...  Manageable states to include in the graph
+  -n, --include-namespaces=<value>...         Namespaces to include in the graph
+  -o, --target-org=<value>                    (required) Username or alias of the target org. Not required if the
+                                              `target-org` configuration variable is already set.
+  -t, --include-types=<value>...              Types to include in the graph
+      --exclude-manageable-states=<value>...  Manageable states to exclude from the graph
+      --exclude-namespaces=<value>...         Namespaces to exclude from the graph
+      --exclude-types=<value>...              Types to exclude from the graph
 
 GLOBAL FLAGS
-  --json  Format output as json.
+  --flags-dir=<value>  Import flag values from a directory.
+  --json               Format output as json.
 
 DESCRIPTION
-  Say hello either to the world or someone you know.
+  Summary of a command.
 
-  Say hello either to the world or someone you know.
+  More information about a command. Don't repeat the summary.
 
 EXAMPLES
-  Say hello to the world:
+  $ sf map metadata
 
-    $ sf hello world
+FLAG DESCRIPTIONS
+  -a, --api-version=<value>  Target API version for the deploy.
 
-  Say hello to someone you know:
+    Use this flag to override the default API version with the API version of your package.xml file. The default API
+    version is the latest version supported by the CLI.
+```
 
-    $ sf hello world --name Astro
+## `sf map org`
+
+Say hello.
+
+```
+USAGE
+  $ sf map org -o <value> -f <value>... [--json] [--flags-dir <value>] [-a <value>] [-d <value>]
+
+FLAGS
+  -a, --api-version=<value>  Target API version for the deploy.
+  -d, --output-dir=<value>   Directory in which to generate the gefx file; default is current directory.
+  -f, --files=<value>...     (required) MedataComponentDependency csv files
+  -o, --target-org=<value>   (required) Username or alias of the target org. Not required if the `target-org`
+                             configuration variable is already set.
+
+GLOBAL FLAGS
+  --flags-dir=<value>  Import flag values from a directory.
+  --json               Format output as json.
+
+DESCRIPTION
+  Say hello.
+
+  Say hello either to the world or someone you know.
+
+FLAG DESCRIPTIONS
+  -a, --api-version=<value>  Target API version for the deploy.
+
+    Use this flag to override the default API version with the API version of your package.xml file. The default API
+    version is the latest version supported by the CLI.
 ```
 
 <!-- commandsstop -->
