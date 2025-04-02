@@ -5,7 +5,8 @@
   "dependencies": {
     "@oclif/core": "^4",
     "@salesforce/core": "^8",
-    "@salesforce/sf-plugins-core": "^12"
+    "@salesforce/sf-plugins-core": "^12",
+    "sf-org-mapper-lib": "^0.8.0"
   },
   "devDependencies": {
     "@oclif/plugin-command-snapshot": "^5.1.9",
@@ -45,6 +46,9 @@
     "topics": {
       "hello": {
         "description": "Commands to say hello."
+      },
+      "map": {
+        "description": "description for map"
       }
     },
     "flexibleTaxonomy": true
