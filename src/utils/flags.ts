@@ -1,7 +1,8 @@
 import { Flags } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 
-const commonFlagMessages = Messages.loadMessages('sf-org-mapper', 'commonFlags');
+Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
+const commonFlagMessages = Messages.loadMessages('sf-org-mapper', 'commonMessages');
 
 export const commonFlags = {
   'target-org': Flags.requiredOrg(),
