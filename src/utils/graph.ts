@@ -1,6 +1,13 @@
 import { action } from '@oclif/core/ux';
 import { Org } from '@salesforce/core';
-import { buildGraph, parseCSVFile, queryMetadatas, queryPackage2Members, writeGexf } from 'sf-org-mapper-lib';
+import {
+  buildGraph,
+  parseCSVFile,
+  queryMetadataComponentDependencies,
+  queryMetadatas,
+  queryPackage2Members,
+  writeGexf,
+} from 'sf-org-mapper-lib';
 import {
   ManageableState,
   MetadataComponentDependency,
@@ -15,7 +22,7 @@ import { MapDependenciesResult } from '../commands/map/dependencies.js';
 import { MapUsesResult } from '../commands/map/uses.js';
 
 type BuildGraphOptions = {
-  files: string[];
+  files?: string[];
   outputDir?: string;
   apiVersion: string;
   targetOrg: Org;
@@ -52,9 +59,13 @@ async function prepareGraph(
 
   action.start('Loading dependencies...');
   let metadataComponentDependencies: MetadataComponentDependency[] = [];
-  options.files.forEach((file) => {
-    metadataComponentDependencies = metadataComponentDependencies.concat(parseCSVFile(file));
-  });
+  if (options.files) {
+    options.files.forEach((file) => {
+      metadataComponentDependencies = metadataComponentDependencies.concat(parseCSVFile(file));
+    });
+  } else {
+    metadataComponentDependencies = await queryMetadataComponentDependencies(connection);
+  }
   action.stop();
 
   action.start('Loading metadata from org...');

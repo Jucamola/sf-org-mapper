@@ -17,7 +17,6 @@ export const commonFlags = {
     aliases: ['medatatacomponentdependenciesfiles'],
     multiple: true,
     delimiter: ',',
-    required: true,
   }),
   'output-dir': Flags.directory({
     char: 'd',
