@@ -6980,10 +6980,10 @@ setimmediate@^1.0.5:
   resolved "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
   integrity sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==
 
-sf-org-mapper-lib@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.npmjs.org/sf-org-mapper-lib/-/sf-org-mapper-lib-0.8.0.tgz"
-  integrity sha512-iOSju0fAzzDChp7HKMx/35x5piChoA2osWjJNDFHO3bom0dnKdbJ9HzzSfJb6Dsp0usCivLaHND4/R/C7wYeQA==
+sf-org-mapper-lib@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/sf-org-mapper-lib/-/sf-org-mapper-lib-0.9.0.tgz#36871235f9b527a70597ef2e07c827d05e520d9e"
+  integrity sha512-skHb28ztoL2e9CWG0yJPf110j8f7XxsnDGE2YRshtSY5/8Nkwz1yVwdKuQbpGxKy7xJR29TkTXx3y/9BJHvb1g==
   dependencies:
     "@jsforce/jsforce-node" "^3.7.0"
     "@salesforce/core" "^8.8.7"
