@@ -111,8 +111,54 @@ sf plugins
 
 <!-- commands -->
 
+- [`sf map dependencies`](#sf-map-dependencies)
 - [`sf map metadata`](#sf-map-metadata)
 - [`sf map org`](#sf-map-org)
+- [`sf map uses`](#sf-map-uses)
+
+## `sf map dependencies`
+
+Build a graph with the dependencies of a metadata element.
+
+```
+USAGE
+  $ sf map dependencies -o <value> --metadata <value>... [--json] [--flags-dir <value>] [-a <value>] [-f <value>...]
+    [-d <value>] [-t <value>...] [--exclude-types <value>...] [-n <value>...] [--exclude-namespaces <value>...] [-m
+    <value>...] [--exclude-manageable-states <value>...] [-p] [--merge] [--transitive]
+
+FLAGS
+  -a, --api-version=<value>                   Target API version for the deploy.
+  -d, --output-dir=<value>                    Directory in which to generate the gefx file; default is current
+                                              directory.
+  -f, --files=<value>...                      MedataComponentDependency csv files.
+  -m, --include-manageable-states=<value>...  Manageable states to include in the graph
+  -n, --include-namespaces=<value>...         Namespaces to include in the graph
+  -o, --target-org=<value>                    (required) Username or alias of the target org. Not required if the
+                                              `target-org` configuration variable is already set.
+  -p, --include-package-info                  ADd package info to the nodes.
+  -t, --include-types=<value>...              Types to include in the graph
+      --exclude-manageable-states=<value>...  Manageable states to exclude from the graph
+      --exclude-namespaces=<value>...         Namespaces to exclude from the graph
+      --exclude-types=<value>...              Types to exclude from the graph
+      --merge                                 Merge resulting graphs into one
+      --metadata=<value>...                   (required) List of metadata
+      --transitive                            Creates graph with less edges
+
+GLOBAL FLAGS
+  --flags-dir=<value>  Import flag values from a directory.
+  --json               Format output as json.
+
+DESCRIPTION
+  Build a graph with the dependencies of a metadata element.
+
+  More information about a command. Don't repeat the summary.
+
+FLAG DESCRIPTIONS
+  -a, --api-version=<value>  Target API version for the deploy.
+
+    Use this flag to override the default API version with the API version of your package.xml file. The default API
+    version is the latest version supported by the CLI.
+```
 
 ## `sf map metadata`
 
@@ -120,19 +166,20 @@ Summary of a command.
 
 ```
 USAGE
-  $ sf map metadata -o <value> -f <value>... [--json] [--flags-dir <value>] [-a <value>] [-d <value>] [-t
+  $ sf map metadata -o <value> [--json] [--flags-dir <value>] [-a <value>] [-f <value>...] [-d <value>] [-t
     <value>...] [--exclude-types <value>...] [-n <value>...] [--exclude-namespaces <value>...] [-m <value>...]
-    [--exclude-manageable-states <value>...]
+    [--exclude-manageable-states <value>...] [-p]
 
 FLAGS
   -a, --api-version=<value>                   Target API version for the deploy.
   -d, --output-dir=<value>                    Directory in which to generate the gefx file; default is current
                                               directory.
-  -f, --files=<value>...                      (required) MedataComponentDependency csv files
+  -f, --files=<value>...                      MedataComponentDependency csv files.
   -m, --include-manageable-states=<value>...  Manageable states to include in the graph
   -n, --include-namespaces=<value>...         Namespaces to include in the graph
   -o, --target-org=<value>                    (required) Username or alias of the target org. Not required if the
                                               `target-org` configuration variable is already set.
+  -p, --include-package-info                  ADd package info to the nodes.
   -t, --include-types=<value>...              Types to include in the graph
       --exclude-manageable-states=<value>...  Manageable states to exclude from the graph
       --exclude-namespaces=<value>...         Namespaces to exclude from the graph
@@ -163,14 +210,15 @@ Say hello.
 
 ```
 USAGE
-  $ sf map org -o <value> -f <value>... [--json] [--flags-dir <value>] [-a <value>] [-d <value>]
+  $ sf map org -o <value> [--json] [--flags-dir <value>] [-a <value>] [-f <value>...] [-d <value>] [-p]
 
 FLAGS
-  -a, --api-version=<value>  Target API version for the deploy.
-  -d, --output-dir=<value>   Directory in which to generate the gefx file; default is current directory.
-  -f, --files=<value>...     (required) MedataComponentDependency csv files
-  -o, --target-org=<value>   (required) Username or alias of the target org. Not required if the `target-org`
-                             configuration variable is already set.
+  -a, --api-version=<value>   Target API version for the deploy.
+  -d, --output-dir=<value>    Directory in which to generate the gefx file; default is current directory.
+  -f, --files=<value>...      MedataComponentDependency csv files.
+  -o, --target-org=<value>    (required) Username or alias of the target org. Not required if the `target-org`
+                              configuration variable is already set.
+  -p, --include-package-info  ADd package info to the nodes.
 
 GLOBAL FLAGS
   --flags-dir=<value>  Import flag values from a directory.
@@ -180,6 +228,53 @@ DESCRIPTION
   Say hello.
 
   Say hello either to the world or someone you know.
+
+FLAG DESCRIPTIONS
+  -a, --api-version=<value>  Target API version for the deploy.
+
+    Use this flag to override the default API version with the API version of your package.xml file. The default API
+    version is the latest version supported by the CLI.
+```
+
+## `sf map uses`
+
+Summary of a command.
+
+```
+USAGE
+  $ sf map uses -o <value> --metadata <value>... [--json] [--flags-dir <value>] [-a <value>] [-f <value>...]
+    [-d <value>] [-t <value>...] [--exclude-types <value>...] [-n <value>...] [--exclude-namespaces <value>...] [-m
+    <value>...] [--exclude-manageable-states <value>...] [-p] [--merge] [--transitive]
+
+FLAGS
+  -a, --api-version=<value>                   Target API version for the deploy.
+  -d, --output-dir=<value>                    Directory in which to generate the gefx file; default is current
+                                              directory.
+  -f, --files=<value>...                      MedataComponentDependency csv files.
+  -m, --include-manageable-states=<value>...  Manageable states to include in the graph
+  -n, --include-namespaces=<value>...         Namespaces to include in the graph
+  -o, --target-org=<value>                    (required) Username or alias of the target org. Not required if the
+                                              `target-org` configuration variable is already set.
+  -p, --include-package-info                  ADd package info to the nodes.
+  -t, --include-types=<value>...              Types to include in the graph
+      --exclude-manageable-states=<value>...  Manageable states to exclude from the graph
+      --exclude-namespaces=<value>...         Namespaces to exclude from the graph
+      --exclude-types=<value>...              Types to exclude from the graph
+      --merge                                 Merge resulting graphs into one
+      --metadata=<value>...                   (required) List of metadata
+      --transitive                            Creates graph with less edges
+
+GLOBAL FLAGS
+  --flags-dir=<value>  Import flag values from a directory.
+  --json               Format output as json.
+
+DESCRIPTION
+  Summary of a command.
+
+  More information about a command. Don't repeat the summary.
+
+EXAMPLES
+  $ sf map uses
 
 FLAG DESCRIPTIONS
   -a, --api-version=<value>  Target API version for the deploy.
