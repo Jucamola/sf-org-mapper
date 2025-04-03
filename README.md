@@ -110,11 +110,10 @@ sf plugins
 ## Commands
 
 <!-- commands -->
-
-- [`sf map dependencies`](#sf-map-dependencies)
-- [`sf map metadata`](#sf-map-metadata)
-- [`sf map org`](#sf-map-org)
-- [`sf map uses`](#sf-map-uses)
+* [`sf map dependencies`](#sf-map-dependencies)
+* [`sf map metadata`](#sf-map-metadata)
+* [`sf map org`](#sf-map-org)
+* [`sf map uses`](#sf-map-uses)
 
 ## `sf map dependencies`
 
@@ -282,5 +281,4 @@ FLAG DESCRIPTIONS
     Use this flag to override the default API version with the API version of your package.xml file. The default API
     version is the latest version supported by the CLI.
 ```
-
 <!-- commandsstop -->
